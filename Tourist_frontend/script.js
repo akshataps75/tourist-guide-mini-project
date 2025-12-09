@@ -1,7 +1,13 @@
 document.addEventListener('DOMContentLoaded', () => {
 
-    // --- DATA ---
-    // In a real app, this data would be fetched from an API.
+
+// ----------------------------------------------------------------------------    
+// IMPORTANT NOTE: The data below (attractionData, experienceData, etc.) is
+// currently in arrays (attractionData, experienceData, gemsData) for prototyping the UI. This will be replaced 
+// by live API calls to fetch the true dataset in the next development phase.
+// ----------------------------------------------------------------------------
+
+
     const attractionData = [
         { id: 1, name: "Shaniwar Wada", location: "Pune City", image: "Shaniwar_Wada.jpg", tags: ["forts", "history"] },
         { id: 2, name: "Aga Khan Palace", location: "Kalyani Nagar", image: "Pune_Palace.jpg", tags: ["history", "architecture"] },
