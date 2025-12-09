@@ -1,0 +1,108 @@
+/* --- GLOBAL BASE STYLES --- */
+body {
+    font-family: sans-serif;
+    background-color: #f7f7f7;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* --- CARD CONTAINER STYLES (Applies to both sign-in and sign-up) --- */
+.auth-container { 
+    background-color: white;
+    padding: 60px 40px;
+    border: 1px solid #ccc;
+    max-width: 400px;
+    width: 100%;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.title-text {
+    font-weight: bold;
+    font-size: 24px;
+    margin-bottom: 40px;
+}
+
+/* --- INPUT AND FORM STYLES --- */
+.auth-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; 
+}
+
+.auth-form input {
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 15px;
+    font-size: 16px;
+}
+
+/* --- ORANGE BUTTON STYLES (Applies to both sign-in and sign-up buttons) --- */
+.main-button {
+    background-color: #ff8c2b; 
+    color: white;
+    border: none;
+    padding: 15px;
+    border-radius: 15px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    margin-top: 5px;
+}
+
+.main-button:hover {
+    background-color: #e57e26;
+}
+
+/* --- SEPARATOR STYLES --- */
+.separator {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin: 25px 0; 
+    line-height: 1; 
+}
+
+.separator::before,
+.separator::after {
+    content: '';
+    flex-grow: 1;
+    height: 1px;
+    background-color: #ccc;
+}
+
+.separator-text {
+    padding: 0 15px;
+    font-size: 14px;
+    color: #555;
+}
+
+/* --- UNIQUE LINK STYLES --- */
+.forgot-password {
+    /* Specific to the Sign-in page */
+    text-align: right;
+    font-size: 14px;
+    color: #444; 
+    text-decoration: none;
+    margin-bottom: 20px;
+}
+
+.link-section {
+    margin-top: 50px;
+}
+
+.link-section p {
+    margin-bottom: 5px;
+    font-size: 16px;
+}
+
+.main-link {
+    color: black;
+    text-decoration: underline;
+    font-size: 16px;
+    font-weight: normal; 
+}
