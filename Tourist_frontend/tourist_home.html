@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tourist Guide - Home</title>
+    <link rel="stylesheet" href="home_styles.css"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header class="main-header">
+        <div class="header-content">
+            <h2 class="header-logo">HOME</h2>
+            <nav class="header-nav">
+                <a href="#">My Bookings</a>
+                <span class="language-toggle">
+                    <i class="fas fa-globe"></i> EN
+                </span>
+                <div class="user-profile">
+                    <i class="fas fa-user-circle"></i>
+                    <span>Hi, Akshata</span>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <section class="hero-section">
+            <div class="location-tag">
+                <i class="fas fa-map-marker-alt"></i>
+                <span>Pune, Maharashtra</span>
+            </div>
+            <h1 class="main-title">Experience & Book<br>Your Next Adventure</h1>
+        </section>
+
+        <section class="search-filters-section">
+            <div class="search-bar">
+                <i class="fas fa-search search-icon"></i>
+                <input type="text" placeholder="Search place">
+                <button class="filter-icon">
+                    <i class="fas fa-sliders-h"></i> 
+                </button>
+            </div>
+
+            <div class="quick-filters-container">
+                <div class="filter-chip active" data-filter="food">
+                    Food 
+                </div>
+                <div class="filter-chip" data-filter="forts">Forts</div>
+                <div class="filter-chip" data-filter="hills">Hills</div>
+                <div class="filter-chip" data-filter="events">Events</div>
+            </div>
+        </section>
+
+        <section class="attractions-section">
+            <h2 class="section-title">Top-rated attractions</h2>
+            <div class="carousel-wrapper" id="attractions-carousel">
+                <button class="nav-arrow left" aria-label="Scroll Left"><i class="fas fa-chevron-left"></i></button>
+                <div class="carousel-container">
+                    <div class="destination-card">
+                        <div class="card-placeholder"></div> 
+                        <p class="card-name">Destination 1</p>
+                        <p class="card-location"><i class="fas fa-map-marker-alt"></i> Location 1</p>
+                    </div>
+                    <div class="destination-card">
+                        <div class="card-placeholder"></div>
+                        <p class="card-name">Destination 2</p>
+                        <p class="card-location"><i class="fas fa-map-marker-alt"></i> Location 2</p>
+                    </div>
+                    <div class="destination-card">
+                        <div class="card-placeholder"></div> 
+                        <p class="card-name">Destination 3</p>
+                        <p class="card-location"><i class="fas fa-map-marker-alt"></i> Location 3</p>
+                    </div>
+                    <div class="destination-card">
+                        <div class="card-placeholder"></div>
+                        <p class="card-name">Destination 4</p>
+                        <p class="card-location"><i class="fas fa-map-marker-alt"></i> Location 4</p>
+                    </div>
+                    <div class="destination-card">
+                        <div class="card-placeholder"></div> 
+                        <p class="card-name">Destination 5</p>
+                        <p class="card-location"><i class="fas fa-map-marker-alt"></i> Location 5</p>
+                    </div>
+                    <div class="destination-card">
+                        <div class="card-placeholder"></div>
+                        <p class="card-name">Destination 6</p>
+                        <p class="card-location"><i class="fas fa-map-marker-alt"></i> Location 6</p>
+                    </div>
+                </div>
+                <button class="nav-arrow right" aria-label="Scroll Right"><i class="fas fa-chevron-right"></i></button>
+            </div>
+        </section>
+        
+        <section class="trending-section">
+            <h2 class="section-title">Trending experiences right now</h2>
+            <div class="carousel-wrapper" id="trending-carousel">
+                <button class="nav-arrow left" aria-label="Scroll Left"><i class="fas fa-chevron-left"></i></button>
+                <div class="carousel-container">
+                    <div class="destination-card">
+                        <div class="card-placeholder"></div> 
+                        <p class="card-name">Experience Name 1</p>
+                        <p class="card-location"><i class="fas fa-map-marker-alt"></i> Location detail 1</p>
+                    </div>
+                    <div class="destination-card">
+                        <div class="card-placeholder"></div> 
+                        <p class="card-name">Experience Name 2</p>
+                        <p class="card-location"><i class="fas fa-map-marker-alt"></i> Location detail 2</p>
+                    </div>
+                    <div class="destination-card">
+                        <div class="card-placeholder"></div> 
+                        <p class="card-name">Experience Name 3</p>
+                        <p class="card-location"><i class="fas fa-map-marker-alt"></i> Location detail 3</p>
+                    </div>
+                    <div class="destination-card">
+                        <div class="card-placeholder"></div> 
+                        <p class="card-name">Experience Name 4</p>
+                        <p class="card-location"><i class="fas fa-map-marker-alt"></i> Location detail 4</p>
+                    </div>
+                </div>
+                <button class="nav-arrow right" aria-label="Scroll Right"><i class="fas fa-chevron-right"></i></button>
+            </div>
+        </section>
+
+        <section class="gems-section">
+            <h2 class="section-title">Hidden Gems & Local Finds</h2>
+            <div class="carousel-wrapper" id="gems-carousel">
+                <button class="nav-arrow left" aria-label="Scroll Left"><i class="fas fa-chevron-left"></i></button>
+                <div class="carousel-container">
+                    <div class="destination-card">
+                        <div class="card-placeholder"></div> 
+                        <p class="card-name">Local Spot 1</p>
+                        <p class="card-location"><i class="fas fa-map-marker-alt"></i> Neighborhood</p>
+                    </div>
+                    <div class="destination-card">
+                        <div class="card-placeholder"></div> 
+                        <p class="card-name">Local Spot 2</p>
+                        <p class="card-location"><i class="fas fa-map-marker-alt"></i> Neighborhood</p>
+                    </div>
+                    <div class="destination-card">
+                        <div class="card-placeholder"></div> 
+                        <p class="card-name">Local Spot 3</p>
+                        <p class="card-location"><i class="fas fa-map-marker-alt"></i> Neighborhood</p>
+                    </div>
+                </div>
+                <button class="nav-arrow right" aria-label="Scroll Right"><i class="fas fa-chevron-right"></i></button>
+            </div>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
