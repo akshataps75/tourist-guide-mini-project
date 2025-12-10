@@ -1,0 +1,68 @@
+<!-- 
+ HTML file for details of a tourist attraction
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attraction Details</title>
+    <link rel="stylesheet" href="details_styles.css"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header class="main-header">
+        <div class="header-content">
+            <h2 class="header-logo">HOME</h2>
+            <nav class="header-nav">
+                <a href="#">My Bookings</a>
+                <span class="language-toggle"><i class="fas fa-globe"></i> EN</span>
+                <div class="user-profile"><i class="fas fa-user-circle"></i><span>Hi, Akshata</span></div>
+            </nav>
+        </div>
+    </header>
+
+    <main class="details-main-content">
+        <section id="detail-view-container">
+            <p style="text-align: center; width: 100%;">Loading attraction details...</p>
+        </section>
+
+        <aside class="booking-sidebar">
+            <h2>Book Guide & Tickets</h2>
+            
+            <div class="booking-field">
+                <label for="booking-date">Date</label>
+                <select id="booking-date"><option>9th December</option></select>
+            </div>
+            
+            <div class="booking-field">
+                <label for="booking-time">Time</label>
+                <select id="booking-time"><option>5:30 AM</option></select>
+            </div>
+            
+            <div class="booking-field">
+                <label for="group-size">Group size</label>
+                <select id="group-size"><option>2 Adults, 1 Child</option></select>
+            </div>
+            
+            <div class="booking-field">
+                <label for="guide-language">Guide language</label>
+                <select id="guide-language"><option>Hindi</option></select>
+            </div>
+            
+            <h3>Payment summary:</h3>
+            <div class="payment-row"><span>Base price:</span> <span class="price-value">₹2,550</span></div>
+            <div class="payment-row"><span>Taxes & fees:</span> <span class="price-value">₹153</span></div>
+            
+            <hr>
+            
+            <div class="payment-row total-row"><span>Total:</span> <span class="price-value">₹2,703</span></div>
+
+            <button class="main-button" style="width: 100%;">Book now</button>
+        </aside>
+    </main>
+
+    <script src="details_script.js"></script>
+</body>
+</html>

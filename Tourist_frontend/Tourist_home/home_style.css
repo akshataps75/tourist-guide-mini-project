@@ -18,7 +18,7 @@ body {
     background-color: var(--secondary-color);
     color: var(--text-color-light);
     padding: 15px 0;
-    z-index: 100; /* Ensure header is on top */
+    z-index: 100;
     position: relative; 
 }
 
@@ -30,38 +30,11 @@ body {
     margin: 0 auto;
     padding: 0 20px;
 }
+.header-logo { font-size: 1.2rem; font-weight: bold; margin: 0; }
+.header-nav { display: flex; align-items: center; gap: 25px; }
+.header-nav a { color: var(--text-color-light); text-decoration: none; font-size: 0.9rem; }
+.user-profile { display: flex; align-items: center; gap: 8px; }
 
-.header-logo {
-    font-size: 1.2rem;
-    font-weight: bold;
-    margin: 0;
-}
-
-.header-nav {
-    display: flex;
-    align-items: center;
-    gap: 25px;
-}
-
-.header-nav a {
-    color: var(--text-color-light);
-    text-decoration: none;
-    font-size: 0.9rem;
-}
-
-.language-toggle {
-    font-size: 0.9rem;
-}
-
-.user-profile {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-}
-
-.user-profile .fa-user-circle {
-    font-size: 1.5rem;
-}
 
 /* --- B. MAIN CONTENT & HERO SECTION --- */
 .main-content {
@@ -104,28 +77,9 @@ body {
     background-color: #e0e6e5;
 }
 
-.search-icon {
-    color: #888;
-    margin-right: 10px;
-}
-
-.search-bar input {
-    flex-grow: 1;
-    border: none;
-    background: transparent;
-    font-size: 1rem;
-    padding: 5px 0;
-    outline: none;
-}
-
-.filter-icon {
-    background: none;
-    border: none;
-    cursor: pointer;
-    color: #444; 
-    font-size: 1.2rem;
-    padding-left: 10px;
-}
+.search-icon { color: #888; margin-right: 10px; }
+.search-bar input { flex-grow: 1; border: none; background: transparent; font-size: 1rem; padding: 5px 0; outline: none; }
+.filter-icon { background: none; border: none; cursor: pointer; color: #444; font-size: 1.2rem; padding-left: 10px; }
 
 .quick-filters-container {
     display: flex;
@@ -154,11 +108,8 @@ body {
     gap: 5px;
 }
 
-.filter-remove-icon {
-    font-size: 1.1em;
-    font-weight: bold;
-    cursor: pointer;
-}
+.filter-remove-icon { font-size: 1.1em; font-weight: bold; cursor: pointer; }
+
 
 /* --- D. CAROUSEL / SLIDER STYLES --- */
 .section-title {
@@ -169,7 +120,6 @@ body {
 
 .carousel-wrapper {
     position: relative; 
-    /* Allows carousel content to span full width on mobile devices */
     margin: 0 -20px; 
     padding: 0 20px; 
     margin-bottom: 40px;
@@ -181,17 +131,15 @@ body {
     scroll-snap-type: x mandatory; 
     gap: 15px;
     padding-bottom: 20px;
-    
-    /* Hide scrollbar for clean appearance */
-    -ms-overflow-style: none;
-    scrollbar-width: none;
+    -ms-overflow-style: none; /* Hide scrollbar for IE/Edge */
+    scrollbar-width: none; /* Hide scrollbar for Firefox */
 }
 
 .carousel-container::-webkit-scrollbar {
-    display: none;
+    display: none; /* Hide scrollbar for Chrome/Safari */
 }
 
-/* CARDS: Standardized Structure */
+/* Card Styling */
 .destination-card {
     flex-shrink: 0; 
     width: 250px; 
@@ -208,24 +156,11 @@ body {
     margin-bottom: 10px;
 }
 
-.card-name {
-    font-size: 1rem;
-    font-weight: bold;
-    margin: 0 0 5px 0;
-}
+.card-name { font-size: 1rem; font-weight: bold; margin: 0 0 5px 0; }
+.card-location { font-size: 0.85rem; color: #666; margin: 0; }
+.card-location .fa-map-marker-alt { margin-right: 5px; font-size: 0.8em; }
 
-.card-location {
-    font-size: 0.85rem;
-    color: #666;
-    margin: 0;
-}
-
-.card-location .fa-map-marker-alt {
-    margin-right: 5px;
-    font-size: 0.8em;
-}
-
-/* NAVIGATION ARROW STYLES */
+/* Navigation Arrows */
 .nav-arrow {
     position: absolute;
     top: 50%; 
@@ -246,25 +181,10 @@ body {
     transition: opacity 0.2s;
 }
 
-.nav-arrow:hover {
-    opacity: 1;
-}
+.nav-arrow.left { left: 20px; }
+.nav-arrow.right { right: 20px; }
 
-.nav-arrow.left {
-    left: 20px; 
-}
-
-.nav-arrow.right {
-    right: 20px; 
-}
-
-/* Responsive Styles for Mobile */
 @media (max-width: 900px) {
-    .nav-arrow {
-        display: none;
-    }
-    .destination-card {
-        /* Allows two cards to fit nicely side-by-side on mobile */
-        width: 45vw; 
-    }
+    .nav-arrow { display: none; }
+    .destination-card { width: 45vw; }
 }

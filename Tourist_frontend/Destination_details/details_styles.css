@@ -1,0 +1,151 @@
+:root {
+    /* Define colors again for safety, as this file is separate */
+    --primary-color: #ff8c2b; /* Orange */
+    --secondary-color: #2e665d; /* Dark Teal/Green */
+    --text-color-dark: #333;
+    --text-color-light: #f4f4f4;
+}
+
+body {
+    font-family: sans-serif;
+    margin: 0;
+    background-color: #fff;
+    color: var(--text-color-dark);
+}
+
+/* --- A. SHARED STYLES (HEADER & BUTTONS) --- */
+/* These styles are often shared and duplicated for simplicity/safety, 
+   or they would be in a third 'global.css' file. */
+
+.main-header {
+    background-color: var(--secondary-color);
+    color: var(--text-color-light);
+    padding: 15px 0;
+    z-index: 100;
+    position: relative; 
+}
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+.header-logo { font-size: 1.2rem; font-weight: bold; margin: 0; }
+.header-nav { display: flex; align-items: center; gap: 25px; }
+.header-nav a { color: var(--text-color-light); text-decoration: none; font-size: 0.9rem; }
+.user-profile { display: flex; align-items: center; gap: 8px; }
+
+.main-button {
+    background-color: var(--primary-color); 
+    color: white;
+    border: none;
+    padding: 15px;
+    border-radius: 4px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    width: 100%; /* Make sure button takes full width in sidebar */
+}
+.main-button:hover { background-color: #e57e26; }
+
+
+/* --- B. DETAILS PAGE LAYOUT (FIXES SIDE-BY-SIDE) --- */
+
+.details-main-content {
+    /* CRITICAL: Enables side-by-side view for content and sidebar */
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    max-width: 1200px;
+    margin: 30px auto;
+    padding: 0 20px;
+}
+
+#detail-view-container {
+    flex: 3; /* Content area takes 3 parts */
+    min-width: 60%;
+}
+
+/* --- Booking Sidebar Styles --- */
+
+.booking-sidebar {
+    flex: 1; /* Sidebar area takes 1 part */
+    max-width: 350px;
+    padding: 25px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #fcfcfc;
+    align-self: flex-start; /* Stops sidebar from stretching full height */
+}
+
+.booking-sidebar h2 { font-size: 1.5rem; margin-top: 0; margin-bottom: 20px; }
+
+/* Booking Form Elements */
+.booking-field { margin-bottom: 20px; }
+.booking-field label { display: block; font-weight: 600; margin-bottom: 5px; }
+.booking-field select {
+    width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px; font-size: 1rem;
+    appearance: none; 
+    /* Custom select arrow graphic */
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"><path fill="gray" d="M7 10l5 5 5-5z"/></svg>');
+    background-repeat: no-repeat; background-position: right 10px center;
+}
+
+/* Payment Summary Fixes */
+.payment-row { 
+    display: flex; 
+    justify-content: space-between; /* CRITICAL: Aligns price right */
+    margin-bottom: 8px; font-size: 1rem; 
+}
+.total-row { 
+    font-size: 1.5rem; font-weight: bold; color: var(--secondary-color); 
+    margin-top: 15px; margin-bottom: 25px; 
+}
+.booking-sidebar hr { border: 0; border-top: 1px solid #eee; margin: 15px 0; }
+
+
+/* --- C. IMAGE GALLERY & CONTENT STYLES --- */
+
+.gallery-wrapper { display: flex; gap: 15px; margin-bottom: 30px; }
+.main-image { flex: 2; }
+.side-images {
+    flex: 1; display: flex; flex-direction: column; gap: 10px; position: relative;
+}
+.gallery-wrapper img { width: 100%; height: auto; border-radius: 8px; object-fit: cover; }
+.side-images img:first-child { height: 60%; }
+.side-images img:nth-child(2) { height: 40%; filter: brightness(60%); }
+.image-overlay {
+    position: absolute; bottom: 20px; right: 20px; color: white; font-size: 1.5rem; font-weight: bold;
+    pointer-events: none;
+}
+
+/* Attraction Info */
+.attraction-name { font-size: 2.5rem; font-weight: 800; margin: 0 0 10px 0; }
+.attraction-meta { font-size: 1rem; color: #666; margin: 0 0 5px 0; }
+.attraction-meta .fa-map-marker-alt { color: var(--secondary-color); margin-right: 5px; }
+.attraction-price { font-size: 1.5rem; font-weight: bold; margin: 20px 0 30px 0; }
+.attraction-description { line-height: 1.6; color: #444; }
+
+
+/* --- D. RESPONSIVE STYLES (Mobile View Fix) --- */
+
+@media (max-width: 900px) {
+    .details-main-content {
+        flex-direction: column; /* Stack vertically */
+        gap: 20px;
+    }
+    .booking-sidebar {
+        width: 100%;
+        max-width: none;
+    }
+    .gallery-wrapper {
+        flex-direction: column;
+    }
+    .side-images img:nth-child(2), .image-overlay {
+        display: none; /* Hide secondary images and overlay on small screens */
+    }
+    .attraction-name { font-size: 1.8rem; }
+}
